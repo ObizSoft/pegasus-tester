@@ -3,6 +3,7 @@
 .settings/
 
 *.class
+*.log
 
 # Package Files #
 *.jar

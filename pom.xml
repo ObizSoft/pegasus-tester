@@ -31,6 +31,21 @@
 			<artifactId>pegasus-common</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.obizsoft.pegasusframework</groupId>
+			<artifactId>base-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.obizsoft.mwv</groupId>
+			<artifactId>beverage-forms</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.obizsoft.mwv</groupId>
+			<artifactId>mwv-ui</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		
         <!-- Servlet 3.0 API -->
         <dependency>
