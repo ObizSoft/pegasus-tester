@@ -8,6 +8,8 @@
 						http://www.springframework.org/schema/security
 						http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
+	<import resource="applicationContext-dataSource.xml" />
+
 	<context:component-scan
 		base-package="com.obizsoft.pegasusframework,
 	    								com.obizsoft.mwv.beverageforms">
@@ -24,12 +26,20 @@
 		<security:authentication-provider>
 			<!-- TODO change this to reference a real production environment user 
 				service -->
-			<security:user-service>
-				<security:user name="admin" password="admin"
-					authorities="ROLE_ADMIN, ROLE_USER" />
-				<security:user name="user" password="user"
-					authorities="ROLE_USER" />
-			</security:user-service>
+			<security:jdbc-user-service data-source-ref="dataSource"
+ 
+		   users-by-username-query="
+		     SELECT USERNAME, PASSWORD, CASE ENABLED WHEN 1 THEN 'true' ELSE 'false' END 'ENABLED' 
+		     FROM app_user 
+		     WHERE USERNAME=?;"
+ 
+		   authorities-by-username-query="
+		    SELECT u.USERNAME, r.ROLENAME 
+			FROM app_user u, user_role r
+			WHERE u.ID = r.USERID
+			AND u.USERNAME=?;"
+ 
+			/>
 		</security:authentication-provider>
 	</security:authentication-manager>
 

@@ -37,7 +37,7 @@
 			<artifactId>base-module</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.obizsoft.mwv</groupId>
 			<artifactId>beverage-forms</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -46,7 +46,7 @@
 			<groupId>com.obizsoft.mwv</groupId>
 			<artifactId>mwv-ui</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
+		</dependency> -->
 		
         <!-- Servlet 3.0 API -->
         <dependency>
@@ -136,6 +136,19 @@
 			<version>${jetty.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- jdbc jar -->
+		<dependency>
+			<groupId>com.microsoft</groupId>
+			<artifactId>sqljdbc</artifactId>
+			<version>4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		            
     </dependencies>
     <build>
         <finalName>${project.artifactId}-${project.version}</finalName>
