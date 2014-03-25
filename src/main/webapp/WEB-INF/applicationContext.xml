@@ -15,6 +15,9 @@
 	    								com.obizsoft.mwv.beverageforms">
 		<context:exclude-filter type="assignable"
 			expression="com.obizsoft.pegasusframework.common.CommonModuleManager" />
+		<context:exclude-filter type="assignable"
+			expression="com.obizsoft.pegasusframework.basemodule.BaseModuleManager" />
+		
 	</context:component-scan>
 
 	<security:http  create-session="never" auto-config="true" >
